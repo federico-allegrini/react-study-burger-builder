@@ -1,11 +1,24 @@
 import React from "react";
 import classes from "./Order.module.css";
 const order = (props) => {
+  console.log(props.ingredients);
+  const ingredients = [];
+  for (let ingredientName in props.ingredients) {
+    ingredients.push({
+      name: ingredientName,
+      amount: props.ingredients[ingredientName],
+    });
+  }
+  const ingredientOutput = ingredients.map((ig) => (
+    <span key={ig.name} className={classes.Span}>
+      {ig.name} ({ig.amount})
+    </span>
+  ));
   return (
     <div className={classes.Order}>
-      <p>Ingredients: Salad (1)</p>
+      <p>Ingredients: {ingredientOutput}</p>
       <p>
-        Price: <strong>USD 5.45</strong>
+        Price: <strong>USD {Number.parseFloat(props.price).toFixed(2)}</strong>
       </p>
     </div>
   );

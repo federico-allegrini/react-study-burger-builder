@@ -1,7 +1,16 @@
 .Order {
-  width: 100%;
+  width: 80%;
   border: 3px solid #eee;
   box-shadow: 0 2px 3px #ccc;
   padding: 10px;
   margin: 10px auto;
+}
+
+.Span {
+  text-transform: capitalize;
+  display: inline-block;
+  margin: 0 8px;
+  border: 1px solid #ccc;
+  background-color: #393f4a;
+  padding: 5px;
 }
