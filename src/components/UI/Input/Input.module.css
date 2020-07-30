@@ -36,3 +36,8 @@
 .Invalid::placeholder {
   color: rgb(145, 87, 80);
 }
+
+.ValidationError {
+  color: rgb(210 73 59);
+  margin: 6px 0 0 0;
+}
