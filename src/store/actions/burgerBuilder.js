@@ -17,14 +17,14 @@ export const removeIngredient = (name) => {
 
 export const setIngredients = (ingredients) => {
   return {
-    type: actionTypes.SET_INGREDIENT,
+    type: actionTypes.SET_INGREDIENTS,
     ingredients: ingredients,
   };
 };
 
-export const fetchIngredientFailed = () => {
+export const fetchIngredientsFailed = () => {
   return {
-    type: actionTypes.FETCH_INGREDIENT_FAILED,
+    type: actionTypes.FETCH_INGREDIENTS_FAILED,
   };
 };
 
@@ -36,7 +36,7 @@ export const initIngredients = () => {
         dispatch(setIngredients(response.data));
       })
       .catch((error) => {
-        dispatch(fetchIngredientFailed());
+        dispatch(fetchIngredientsFailed());
       });
   };
 };
