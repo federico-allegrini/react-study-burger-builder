@@ -1,7 +1,6 @@
 import React from "react";
 import classes from "./Order.module.css";
 const order = (props) => {
-  console.log(props.ingredients);
   const ingredients = [];
   for (let ingredientName in props.ingredients) {
     ingredients.push({
