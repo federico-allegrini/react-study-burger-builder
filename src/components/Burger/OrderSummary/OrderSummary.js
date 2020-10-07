@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import Button from "../../UI/Button/Button";
-const orderSummary = (props) => {
+const OrderSummary = (props) => {
   const ingredientSummary = Object.keys(props.ingredients).map((igKey) => (
     <li key={"m-" + igKey}>
       <span style={{ textTransform: "capitalize" }}>{igKey}</span>:&nbsp;
@@ -25,4 +25,4 @@ const orderSummary = (props) => {
     </Fragment>
   );
 };
-export default orderSummary;
+export default OrderSummary;
